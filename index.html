@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href=" https://cdn-icons-png.flaticon.com/512/69/69879.png">;
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Monetário</title>
+</head>
+
+<body>
+    <h1>Conversor Monetário</h1>
+
+    <div class="caixa">
+        <label for="Real">Valor em Real:</label>
+        <input type="number" id="Real">
+        <br>
+        <label for="Dólar">Valor em Dólar:</label>
+        <input type="number" id="Dólar" readonly>
+    </div>
+    <br>
+    <button onclick="calcularDolar()">Converter</button>
+    <br>
+    <div id="resultado"></div>
+
+
+
+        <input type="checkbox" name="#" id="toggle" class="toggle-btn">
+        <label for="toggle" class="toggle-label"></label>
+ 
+
+
+    <script>
+        function calcularDolar() {
+            const Real = parseFloat(document.getElementById('Real').value);
+            const taxaDeCambio = 5.0;
+
+            const Dólar = Real / taxaDeCambio;
+
+            document.getElementById('Dólar').value = Dólar.toFixed(2);
+        }
+
+
+        const toggleBtn = document.getElementById('toggle');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', function () {
+            body.classList.toggle('dark-mode')
+        })
+    </script>
+
+
+    <footer>Desenvolvido por Mariene | ProgWeb2024</footer>
+</body>
+
+
+</html>

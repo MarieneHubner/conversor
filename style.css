@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@font-face {
+    font-family: fonte;
+    src: url(fonte/dunkin/Dunkin\ Sans\ Bold.otf);
+}
+ h1{
+    font-family: fonte;
+} 
+
+.caixa{
+    justify-content: center;
+    display: table-row;
+    align-items: center;
+    
+}
+
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(236, 36, 36);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-label:before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: orchid;
+}
+
+.toggle-btn:checked+.toggle-label {
+    background-color: lightslategray;
+    transition: 1s;
+}
+
+.toggle-btn:checked+.toggle-label:before {
+    background-color: blueviolet;
+    transform: translateX(30px);
+}
+
+.toggle-btn{
+    display: none;
+}
+
+.dark-mode{
+    background-color: rgb(6, 6, 82);
+
+    }
